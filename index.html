@@ -155,38 +155,3 @@
 </body>
 
 </html>
-
-async function sendInvoice() {
-    // 1. Password Protection Check
-    const password = prompt("Please enter Admin Password:");
-    if (password !== "SEASONS2024") { // Change this to your preferred password
-        alert("Unauthorized access!");
-        return;
-    }
-
-    const scriptURL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE';
-    
-    // 2. Gather Data from the form
-    const invoiceData = {
-        customerName: document.getElementById('custName').value,
-        customerEmail: document.getElementById('custEmail').value,
-        labor: document.getElementById('laborAmount').value,
-        materials: document.getElementById('materialsAmount').value,
-        taxRate: document.getElementById('taxRate').value
-    };
-
-    // 3. Send to Google Sheets/Email Script
-    try {
-        const response = await fetch(scriptURL, {
-            method: 'POST',
-            body: JSON.stringify(invoiceData)
-        });
-        const result = await response.json();
-        if(result.result === "success") {
-            alert("Invoice " + result.invoice + " sent successfully!");
-        }
-    } catch (error) {
-        console.error('Error!', error.message);
-        alert("Failed to send invoice. Check console.");
-    }
-}
