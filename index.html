@@ -3,206 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4 Seasons HVAC & Home Improvement | (703) 634-3661</title>
+    <title>4 Seasons HVAC & Home Improvement</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --red: #D12F11; --yellow: #FBBF24; --green: #15803d; }
-        .bg-brand-red { background-color: var(--red); }
-        .bg-brand-yellow { background-color: var(--yellow); }
-        .bg-brand-green { background-color: var(--green); }
         .text-brand-red { color: var(--red); }
-        .hero-section { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1350&q=80'); background-size: cover; }
+        .bg-brand-red { background-color: var(--red); }
+        .bg-brand-green { background-color: var(--green); }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1350&q=80'); background-size: cover; }
     </style>
 </head>
-<body class="bg-slate-50 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
-    <nav class="bg-white shadow-md sticky top-0 z-50 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <img src="LOGO1.jpg" alt="4 Seasons Logo" class="h-14">
-            <div class="hidden md:flex space-x-8 font-bold uppercase text-sm">
-                <a href="#hvac" class="hover:text-brand-red">HVAC</a>
-                <a href="#handyman" class="hover:text-brand-red">Handyman</a>
-                <a href="#improvement" class="hover:text-brand-red">Improvement</a>
-                <button onclick="toggleAdmin()" class="text-brand-green border-2 border-brand-green px-4 py-1 rounded-full">Admin Portal</button>
+    <nav class="bg-white shadow sticky top-0 z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="LOGO1.jpg" alt="4 Seasons" class="h-12">
+            <div class="hidden md:flex space-x-6 font-bold uppercase text-xs tracking-widest">
+                <a href="#services" class="hover:text-brand-red">Services</a>
+                <a href="#quote" class="hover:text-brand-red">Quotes</a>
+                <button onclick="toggleAdmin()" class="bg-brand-green text-white px-4 py-1 rounded">Admin</button>
             </div>
+            <a href="tel:7036343661" class="font-bold text-brand-red"><i class="fas fa-phone"></i> (703) 634-3661</a>
         </div>
     </nav>
 
-    <header class="hero-section text-white py-24 text-center">
-        <h1 class="text-6xl font-black italic mb-4">4 <span class="text-brand-red">SEASONS</span></h1>
-        <p class="text-2xl font-light mb-8 uppercase tracking-widest">Complete Home Repair & Maintenance</p>
-        <div class="flex justify-center gap-4">
-            <a href="#quote" class="bg-brand-red px-8 py-4 rounded-lg font-bold">Request Quote</a>
-            <a href="tel:7036343661" class="bg-brand-yellow text-black px-8 py-4 rounded-lg font-bold">Call Now</a>
-        </div>
+    <header class="hero-bg text-white py-24 text-center">
+        <h1 class="text-6xl font-black italic mb-2">4 <span class="text-brand-red">SEASONS</span></h1>
+        <p class="text-xl uppercase tracking-tighter mb-8">HVAC • Handyman • Home Improvement</p>
+        <a href="#quote" class="bg-brand-red px-10 py-4 rounded font-bold uppercase">Get Free Estimate</a>
     </header>
 
-    <section class="py-20 container mx-auto px-6">
-        <div id="hvac" class="mb-16 grid md:grid-cols-2 gap-12 items-center">
-            <div class="p-8 bg-white shadow-xl border-l-8 border-brand-red rounded-r-xl">
-                <h2 class="text-3xl font-bold mb-4 uppercase"><i class="fas fa-snowflake text-brand-red mr-3"></i>HVAC Solutions</h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">Don't let the weather dictate your comfort. We specialize in high-efficiency heating and cooling systems tailored for your home. Our services include:</p>
-                <ul class="grid grid-cols-2 gap-2 text-sm font-bold">
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>AC Installation</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Furnace Repair</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Smart Thermostats</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Duct Cleaning</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Heat Pumps</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Freon Refills</li>
-                </ul>
+    <section id="services" class="py-20 container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded shadow-lg border-t-4 border-brand-red">
+                <h3 class="text-xl font-bold mb-4 uppercase">HVAC Service</h3>
+                <p class="text-sm text-gray-600 mb-4">Heating and cooling repair, installations, furnace maintenance, and smart thermostat integration.</p>
+                <ul class="text-xs space-y-2 font-bold"><li class="text-green-700">✓ AC & Furnace Repair</li><li class="text-green-700">✓ Seasonal Tune-ups</li></ul>
             </div>
-            <div class="text-right">
-                <h3 class="text-5xl font-black text-gray-200">HEATING & COOLING</h3>
+            <div class="bg-white p-8 rounded shadow-lg border-t-4 border-yellow-500">
+                <h3 class="text-xl font-bold mb-4 uppercase">Handyman Duties</h3>
+                <p class="text-sm text-gray-600 mb-4">Professional TV mounting, furniture assembly, gutter cleaning, door repairs, and general home fixes.</p>
+                <ul class="text-xs space-y-2 font-bold"><li class="text-green-700">✓ TV & Shelf Mounting</li><li class="text-green-700">✓ Door/Window Repair</li></ul>
             </div>
-        </div>
-
-        <div id="handyman" class="mb-16 grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <h3 class="text-5xl font-black text-gray-200 uppercase">Expert Repairs</h3>
-            </div>
-            <div class="order-1 md:order-2 p-8 bg-white shadow-xl border-l-8 border-brand-yellow rounded-r-xl">
-                <h2 class="text-3xl font-bold mb-4 uppercase"><i class="fas fa-tools text-yellow-500 mr-3"></i>Handyman Duties</h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">Your "To-Do" list is our priority. Professional, reliable, and multi-skilled service for all those small but vital home tasks.</p>
-                <ul class="grid grid-cols-2 gap-2 text-sm font-bold">
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>TV Mounting</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Furniture Assembly</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Gutter Maintenance</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Door Hardware</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Light Fixtures</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Shelf Installation</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="improvement" class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="p-8 bg-white shadow-xl border-l-8 border-brand-green rounded-r-xl">
-                <h2 class="text-3xl font-bold mb-4 uppercase"><i class="fas fa-home text-brand-green mr-3"></i>Home Improvement</h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">Enhance the value and beauty of your property with our expert finishing services. We focus on detail and durability.</p>
-                <ul class="grid grid-cols-2 gap-2 text-sm font-bold">
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Drywall Repair</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Interior Painting</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Hardwood Flooring</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Tile Backsplashes</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Custom Molding</li>
-                    <li><i class="fas fa-check text-green-600 mr-2"></i>Basement Finishing</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-5xl font-black text-gray-200">INTERIORS</h3>
+            <div class="bg-white p-8 rounded shadow-lg border-t-4 border-brand-green">
+                <h3 class="text-xl font-bold mb-4 uppercase">Improvement</h3>
+                <p class="text-sm text-gray-600 mb-4">High-quality drywall repair, interior/exterior painting, hardwood flooring, and tile work.</p>
+                <ul class="text-xs space-y-2 font-bold"><li class="text-green-700">✓ Paint & Drywall</li><li class="text-green-700">✓ Flooring Installation</li></ul>
             </div>
         </div>
     </section>
 
-    <section id="quote" class="bg-black py-20 text-white">
-        <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-4xl font-bold mb-6">Let's Get Started</h2>
-                <p class="text-gray-400 mb-8">Send us your details and a description of the work. We will respond within 24 hours with an estimate.</p>
-                <p class="text-2xl font-bold text-brand-yellow">📞 (703) 634-3661</p>
-                <p class="text-lg">✉️ piitay17@gmail.com</p>
-            </div>
+    <section id="quote" class="bg-gray-200 py-16">
+        <div class="max-w-xl mx-auto bg-white p-10 rounded shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-center">Request a Quote</h2>
             <form onsubmit="handleQuote(event)" class="space-y-4">
-                <input type="text" id="q_name" placeholder="Full Name" required class="w-full p-4 bg-gray-900 border border-gray-700 rounded text-white">
-                <input type="email" id="q_email" placeholder="Email Address" required class="w-full p-4 bg-gray-900 border border-gray-700 rounded text-white">
-                <input type="tel" id="q_phone" placeholder="Phone Number" required class="w-full p-4 bg-gray-900 border border-gray-700 rounded text-white">
-                <select id="q_service" class="w-full p-4 bg-gray-900 border border-gray-700 rounded text-white">
-                    <option>HVAC</option>
-                    <option>Handyman</option>
-                    <option>Home Improvement</option>
-                </select>
-                <textarea id="q_message" placeholder="Describe the job..." class="w-full p-4 bg-gray-900 border border-gray-700 rounded h-32 text-white"></textarea>
-                <button id="q_btn" type="submit" class="w-full bg-brand-green py-4 rounded font-black uppercase tracking-widest hover:bg-green-700 transition">Submit Quote Request</button>
+                <input type="text" id="q_name" placeholder="Name" required class="w-full p-3 border rounded">
+                <input type="email" id="q_email" placeholder="Email" required class="w-full p-3 border rounded">
+                <input type="tel" id="q_phone" placeholder="Phone" required class="w-full p-3 border rounded">
+                <select id="q_service" class="w-full p-3 border rounded"><option>HVAC</option><option>Handyman</option><option>Improvement</option></select>
+                <textarea id="q_message" placeholder="Describe the work..." class="w-full p-3 border rounded h-32"></textarea>
+                <button type="submit" id="q_btn" class="w-full bg-brand-green text-white font-bold py-4 rounded">SUBMIT TO 4 SEASONS</button>
             </form>
         </div>
     </section>
 
-    <div id="adminModal" class="hidden fixed inset-0 bg-white z-[100] p-6 overflow-y-auto">
-        <div class="max-w-2xl mx-auto">
-            <div class="flex justify-between items-center border-b pb-4 mb-8">
-                <h2 class="text-3xl font-black text-brand-red uppercase italic">Invoice Generator</h2>
-                <button onclick="toggleAdmin()" class="text-4xl">&times;</button>
-            </div>
-            <div class="space-y-6">
+    <div id="adminModal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-[100] flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-lg p-8 rounded-xl shadow-2xl relative">
+            <button onclick="toggleAdmin()" class="absolute top-4 right-4 text-3xl">&times;</button>
+            <h2 class="text-2xl font-bold text-brand-red mb-6 uppercase italic">Create Invoice</h2>
+            <div class="space-y-4">
+                <input type="text" id="inv_name" placeholder="Customer Name" class="w-full p-3 border rounded">
+                <input type="email" id="inv_email" placeholder="Customer Email" class="w-full p-3 border rounded">
                 <div class="grid grid-cols-2 gap-4">
-                    <input type="text" id="inv_name" placeholder="Customer Name" class="p-3 border rounded w-full">
-                    <input type="email" id="inv_email" placeholder="Customer Email" class="p-3 border rounded w-full">
+                    <div><label class="text-xs font-bold">Labor ($)</label><input type="number" id="inv_labor" class="w-full p-2 border rounded"></div>
+                    <div><label class="text-xs font-bold">Materials ($)</label><input type="number" id="inv_materials" class="w-full p-2 border rounded"></div>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg space-y-4">
-                    <div class="flex justify-between"><span>Labor ($)</span><input type="number" id="inv_labor" class="border p-1 w-24"></div>
-                    <div class="flex justify-between"><span>Materials ($)</span><input type="number" id="inv_materials" class="border p-1 w-24"></div>
-                    <div class="flex justify-between text-brand-red font-bold"><span>Tax (%)</span><input type="number" id="inv_tax" value="6.0" class="border p-1 w-24"></div>
-                    <button onclick="handleInvoice()" id="inv_btn" class="w-full bg-black text-white font-bold py-4 rounded shadow-lg">EMAIL TAX-COMPLIANT INVOICE</button>
-                </div>
+                <input type="number" id="inv_tax" value="6.0" class="w-full p-3 border rounded" placeholder="Tax %">
+                <button onclick="handleInvoice()" id="inv_btn" class="w-full bg-black text-white py-4 font-bold rounded">SEND INVOICE</button>
             </div>
         </div>
     </div>
 
     <script>
-       // Replace this with your newly DEPLOYED URL
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxBPLPBlgsXEtJE3-gxwQ8xFgYYgcwmqGJzimiMYU6ztynI_P96ZiQAOKe3L0FiERrpEQ/exec';
+        // CRITICAL: Replace with your deployed Web App URL
+        const SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE';
 
-async function handleQuote(e) {
-    e.preventDefault();
-    const btn = document.getElementById('q_btn');
-    btn.innerText = "Sending...";
-    
-    const data = {
-        type: "QUOTE",
-        name: document.getElementById('q_name').value,
-        email: document.getElementById('q_email').value,
-        phone: document.getElementById('q_phone').value,
-        service: document.getElementById('q_service').value,
-        message: document.getElementById('q_message').value
-    };
+        function toggleAdmin() {
+            const pass = prompt("Admin PIN:");
+            if(pass === "7036") {
+                document.getElementById('adminModal').classList.toggle('hidden');
+            } else if (pass !== null) { alert("Access Denied"); }
+        }
 
-    try {
-        // We use 'mode: no-cors' because Google Scripts redirect
-        await fetch(SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors', 
-            cache: 'no-cache',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-        alert("Success! Your request has been recorded.");
-        e.target.reset();
-    } catch (error) {
-        alert("Error sending request. Please call us at (703) 634-3661.");
-    } finally {
-        btn.innerText = "Submit Quote Request";
-    }
-}
+        async function handleQuote(e) {
+            e.preventDefault();
+            const btn = document.getElementById('q_btn');
+            btn.innerText = "Processing...";
+            const data = {
+                type: "QUOTE",
+                name: document.getElementById('q_name').value,
+                email: document.getElementById('q_email').value,
+                phone: document.getElementById('q_phone').value,
+                service: document.getElementById('q_service').value,
+                message: document.getElementById('q_message').value
+            };
+            try {
+                await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) });
+                alert("Quote sent to 4 Seasons! We will call you soon.");
+                e.target.reset();
+            } catch (err) { alert("Error sending request."); }
+            btn.innerText = "SUBMIT TO 4 SEASONS";
+        }
 
-async function handleInvoice() {
-    const btn = document.getElementById('inv_btn');
-    const data = {
-        type: "INVOICE",
-        customerName: document.getElementById('inv_name').value,
-        customerEmail: document.getElementById('inv_email').value,
-        labor: document.getElementById('inv_labor').value,
-        materials: document.getElementById('inv_materials').value,
-        taxRate: document.getElementById('inv_tax').value
-    };
-
-    btn.innerText = "Sending Invoice...";
-    
-    try {
-        await fetch(SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-        alert("Invoice sent to customer and recorded in your Sheet!");
-        toggleAdmin();
-    } catch (error) {
-        alert("Error sending invoice.");
-    } finally {
-        btn.innerText = "EMAIL TAX-COMPLIANT INVOICE";
-    }
-}
+        async function handleInvoice() {
+            const btn = document.getElementById('inv_btn');
+            btn.innerText = "Sending...";
+            const data = {
+                type: "INVOICE",
+                customerName: document.getElementById('inv_name').value,
+                customerEmail: document.getElementById('inv_email').value,
+                labor: document.getElementById('inv_labor').value,
+                materials: document.getElementById('inv_materials').value,
+                taxRate: document.getElementById('inv_tax').value
+            };
+            try {
+                await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) });
+                alert("Invoice sent and recorded in Google Sheets!");
+                toggleAdmin();
+            } catch (err) { alert("Error sending invoice."); }
+            btn.innerText = "SEND INVOICE";
+        }
     </script>
 </body>
 </html>
-
